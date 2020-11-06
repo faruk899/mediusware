@@ -26,4 +26,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('product', 'ProductController');
     Route::resource('blog', 'BlogController');
     Route::resource('blog-category', 'BlogCategoryController');
+    Route::get('change-password', 'ChangePasswordController@index');
+    Route::post('change-password', 'ChangePasswordController@store')->name('change.password');
 });
